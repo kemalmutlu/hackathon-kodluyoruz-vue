@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import HackathonList from "@/components/HackathonList";
 import Timer from "@/components/Timer";
 import FAQ from "@/components/FAQ";
+import Sponsor from "@/components/Sponsor";
 
 export default {
   components: {
@@ -12,6 +13,7 @@ export default {
     HackathonList,
     Timer,
     FAQ,
+    Sponsor,
   }
 };
 </script>
@@ -23,6 +25,7 @@ export default {
     <Timer />
     <Hackathon-List />
     <FAQ />
+    <Sponsor />
   </div>
 </template>
 
