@@ -2,12 +2,14 @@
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import HackathonList from "@/components/HackathonList";
+import Timer from "@/components/Timer";
 
 export default {
   components: {
     Navbar,
     Header,
     HackathonList,
+    Timer,
   }
 };
 </script>
@@ -16,6 +18,7 @@ export default {
   <div class="home">
     <Navbar />
     <Header />
+    <Timer />
     <Hackathon-List />
   </div>
 </template>

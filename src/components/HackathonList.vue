@@ -19,7 +19,7 @@ export default {
         id: Math.random() * 7,
         },
         {
-        title: 'Machine Learnin Engineer',
+        title: 'Machine Learning Engineer',
         description: 'Lorem ipsum dolor sit.',
         id: Math.random() * 7,
         }

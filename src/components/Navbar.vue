@@ -3,23 +3,29 @@ export default {
   methods: {
     redirectToDiscord() {
       window.open(`https://discord.gg/fBGEkpGrB5`);
-    }
+    },
   },
-}
+};
 </script>
 
 <template>
   <div class="navbar">
     <div class="navbar__link">
       <router-link to="/">
-        <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" alt="Kodluyoruz logo">
+        <img
+          src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+          alt="Kodluyoruz logo"
+        />
       </router-link>
-      <a href="">
-        Home
-      </a>
-      <a href="">
+      <!-- <a href=""> -->
+      <router-link to="/">Home</router-link>
+      <!-- </a> -->
+      <a href="https://www.kodluyoruz.org/about">
         About
       </a>
+      <!-- <a href=""> -->
+      <router-link to="/team">Team</router-link>
+      <!-- </a> -->
       <a href="">
         Find a machine learning mentor
       </a>
@@ -33,9 +39,8 @@ export default {
 </template>
 
 <style lang="scss">
-$link-color: rgb(107,114,128);
-$link-hover-color: rgb(22,30,46);
-
+$link-color: rgb(107, 114, 128);
+$link-hover-color: rgb(22, 30, 46);
 
 .navbar {
   display: flex;
@@ -58,7 +63,7 @@ $link-hover-color: rgb(22,30,46);
       font-weight: 500;
 
       &:hover {
-        transition: .3s;
+        transition: 0.3s;
         color: $link-hover-color;
       }
     }
@@ -68,8 +73,8 @@ $link-hover-color: rgb(22,30,46);
     button {
       padding: 1rem 2rem;
       border-radius: 6px;
-      background-color: #7289DA;
-      color: #FFF;
+      background-color: #7289da;
+      color: #fff;
       border: none;
       cursor: pointer;
 
