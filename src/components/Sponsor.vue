@@ -2,9 +2,15 @@
   <div class="sponsor">
     <h2 class="h1">Sponsorlar</h2>
     <div class="row">
-      <img src="../assets/Sponsors/kablosuzbeyin_500x.png" class="card-img-top kablosuz-beyin" alt="Kablosuz Beyin">
-      <img src="../assets/kodluyoruz-logo.png" class="card-img-top" alt="Kodluyoruz">
-      <img src="../assets/Sponsors/robotsan.png" class="card-img-top" alt="Robotsan">
+      <a href="https://kablosuzbeyin.com/">
+        <img src="../assets/Sponsors/kablosuzbeyin_500x.png" class="card-img-top kablosuz-beyin" alt="Kablosuz Beyin">
+      </a>
+      <a href="http://kodluyoruz.org/">
+        <img src="../assets/kodluyoruz-logo.png" class="card-img-top" alt="Kodluyoruz">
+      </a>
+      <a href="http://www.robotsan.com.tr/">
+        <img src="../assets/Sponsors/robotsan.png" class="card-img-top" alt="Robotsan">
+      </a>
     </div>
   </div>
 </template>
