@@ -21,25 +21,25 @@ export default {
           name: "Kemal Mutlu",
           title: "Back-End Developer",
           img: Kemal,
-          desc: `www.linkedin.com/in/kemalmutlu`,
+          desc: `https://www.linkedin.com/in/kemalmutlu`,
         },
         {
           name: "Sezer İstif",
           title: "Software Engineer",
           img: Sezer,
-          desc: `www.linkedin.com/in/sezer-istif`,
+          desc: `https://www.linkedin.com/in/sezer-istif`,
         },
         {
           name: "Cengiz C. Mataracı",
           title: "Full Stack Developer",
           img: Cengiz,
-          desc: `www.linkedin.com/in/cengizcmataraci`,
+          desc: `https://www.linkedin.com/in/cengizcmataraci`,
         },
         {
           name: "Ferhat Demir",
           title: "Front-End Developer",
           img: Ferhat,
-          desc: `www.linkedin.com/in/demirferhat`,
+          desc: `https://www.linkedin.com/in/demirferhat`,
         },
       ],
     };
@@ -78,7 +78,7 @@ export default {
                         />
                         <h3 style="margin-top: 10px;">{{ member.name }}</h3>
                         <h6>{{ member.title }}</h6>
-                        <h6>{{ member.desc }}</h6>
+                        <h6><a :href="member.desc" target="_blank">{{ member.desc }}</a></h6>
                     </div>
                   </div>
                 </div>
