@@ -22,7 +22,7 @@ export default {
 
 <template>
   <div class="hackathon-list">
-    <h1 class="hackathon-list__title">10 Open Remote Machine Learning Jobs</h1>
+    <h1 class="hackathon-list__title">Sıradaki Hackathonlar</h1>
     <hackathon-list-item
           v-for="hackathon in hackathons"
           :key="hackathon.id"
@@ -38,5 +38,9 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+
+  &__title {
+    font-size: 2rem;
+  }
 }
 </style>

@@ -74,6 +74,7 @@ $link-hover-color: rgb(22, 30, 46);
       color: #fff;
       border: none;
       cursor: pointer;
+      margin-right: 1.75rem;
 
       &:focus {
         outline: none;
