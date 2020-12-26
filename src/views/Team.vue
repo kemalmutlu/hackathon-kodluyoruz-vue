@@ -8,10 +8,10 @@ import Ferhat from "../assets/ferhat.jpg";
 
 export default {
   props: {
-    member : {
+    member: {
       type: Object,
       required: true,
-    }
+    },
   },
   data() {
     return {
@@ -21,25 +21,25 @@ export default {
           name: "Kemal Mutlu",
           title: "Back-End Developer",
           img: Kemal,
-          desc: `Moscow is the capital and most populous city of Russia, with 13.2 million residents within the city limits and 17.8 million within the urban area. Moscow has the status of a Russian federal city.`,
+          desc: `www.linkedin.com/in/kemalmutlu`,
         },
         {
           name: "Sezer İstif",
           title: "Software Engineer",
           img: Sezer,
-          desc: `Paris is the capital and most populous city of France. By the 17th century, Paris was one of Europe's major centres of finance, commerce, fashion, science, and the arts, and it retains that position still today.`,
+          desc: `www.linkedin.com/in/sezer-istif`,
         },
         {
           name: "Cengiz C. Mataracı",
           title: "Full Stack Developer",
           img: Cengiz,
-          desc: `Rome's history spans more than 2,500 years. While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer, making it one of the oldest continuously occupied sites in Europe.`,
+          desc: `www.linkedin.com/in/cengizcmataraci`,
         },
         {
           name: "Ferhat Demir",
           title: "Front-End Developer",
           img: Ferhat,
-          desc: `By the end of the 12th century, Paris had become the political, economic, religious, and cultural capital of France. Maurice de Sully undertook the construction of the Notre Dame Cathedral at its eastern extremity.`,
+          desc: `www.linkedin.com/in/demirferhat`,
         },
       ],
     };
@@ -68,34 +68,31 @@ export default {
       <content-loader v-if="isLoading" />
       <template v-else>
         <div class="hackathon-detail__header">
-          <!-- <img
-            src="https://kodilan.ams3.digitaloceanspaces.com/companies/superpeer.png"
-            class="hackathon-detail__header-logo"
-          />
-          <h1 class="hackathon-detail__header-title">
-            Kemal Mutlu
-          </h1>
-          <! <p class="hackathon-detail__header-date">
-            Nov. 27, 2020
-          </p> -->
-          <!-- </div> -->
-          <!-- <div class="hackathon-detail__content"> -->
-          <!-- <p> -->
-          <!-- Yazılım Mühendisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, officiis non inventore, ullam aperiam libero debitis recusandae ratione neque sit dolorum ex perferendis dicta vero similique architecto! Placeat, unde velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint id quam blanditiis eaque soluta quibusdam nobis facere dolor esse. Sint qui odit unde possimus quisquam placeat ea, vel incidunt repellat? -->
-          <!-- </p> -->
           <div class="location-contain">
-            <div
-              class="locations"
-              v-for="member in members"
-              :key="member.name"
-            >
-              <place :member="member">
-                <!-- <h2>{{ member.img }}</h2> -->
-                <img :src="member.img" style="width: 220px; height: 280px; border-radius: 50px; box-shadow: 2px 2px black;" />
-                <h2>{{ member.name }}</h2>
-                <h3>{{ member.title }}</h3>
-                <h2>{{ member.desc }}</h2>
-              </place>
+            <div class="container">
+              <div class="row">
+            <div class="locations col-3" v-for="member in members" :key="member.name">
+                    <div
+                      :member="member"
+                      class="card border-0"
+                      style="width: 100%; height: 100%; margin-right: 15px;"
+                    >
+                      <div
+                        class="card body border-0 text-center"
+                        style="height: 100%;"
+                      >
+                        <img
+                          :src="member.img"
+                          class="card-img-top"
+                          style="width: 220px; height: 280px; border-radius: 50px;    "
+                        />
+                        <h3 style="margin-top: 10px;">{{ member.name }}</h3>
+                        <h6>{{ member.title }}</h6>
+                        <h6>{{ member.desc }}</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
