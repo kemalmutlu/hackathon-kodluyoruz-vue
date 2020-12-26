@@ -38,5 +38,9 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+
+  &__title {
+    font-size: 2rem;
+  }
 }
 </style>

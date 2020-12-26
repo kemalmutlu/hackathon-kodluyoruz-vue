@@ -1,7 +1,6 @@
 <template>
   <div class="timer">
     <h1>Sıradaki Hackathon'a kalan süre</h1>
-    <h3>HACKATHON #4</h3>
     <flip-countdown deadline="2021-01-02 10:00:00"></flip-countdown>
   </div>
 </template>
