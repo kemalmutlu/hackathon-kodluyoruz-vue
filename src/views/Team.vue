@@ -48,16 +48,6 @@ export default {
     Navbar,
     ContentLoader,
   },
-  activated() {
-    this.isLoading = true;
-  },
-  created() {
-    this.isLoading = true;
-
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
-  },
 };
 </script>
 
