@@ -2,12 +2,14 @@
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import HackathonList from "@/components/HackathonList";
+import FAQ from "@/components/FAQ";
 
 export default {
   components: {
     Navbar,
     Header,
     HackathonList,
+    FAQ,
   }
 };
 </script>
@@ -17,6 +19,7 @@ export default {
     <Navbar />
     <Header />
     <Hackathon-List />
+    <FAQ />
   </div>
 </template>
 
