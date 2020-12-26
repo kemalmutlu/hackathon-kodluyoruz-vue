@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
 
-    img {
+    a {
       width: 18%;
       margin: 0 24px;
 
