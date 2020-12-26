@@ -2,13 +2,13 @@
   <div class="sponsor">
     <h2 class="h1">Sponsorlar</h2>
     <div class="row">
-      <a href="https://kablosuzbeyin.com/">
+      <a href="https://kablosuzbeyin.com/" target="_blank">
         <img src="../assets/Sponsors/kablosuzbeyin_500x.png" class="card-img-top kablosuz-beyin" alt="Kablosuz Beyin">
       </a>
-      <a href="http://kodluyoruz.org/">
+      <a href="http://kodluyoruz.org/" target="_blank">
         <img src="../assets/kodluyoruz-logo.png" class="card-img-top" alt="Kodluyoruz">
       </a>
-      <a href="http://www.robotsan.com.tr/">
+      <a href="http://www.robotsan.com.tr/" target="_blank">
         <img src="../assets/Sponsors/robotsan.png" class="card-img-top" alt="Robotsan">
       </a>
     </div>
