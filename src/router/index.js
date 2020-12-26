@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/detail",
+    path: "/hackathon/:id",
     name: "HackathonDetail",
-    component: () => import(/* webpackChunkName: "about" */ "../views/HackathonDetail"),
+    component: () => import("../views/HackathonDetail"),
   }
 ];
 
