@@ -1,11 +1,13 @@
 <template>
   <div class="header">
     <div class="header__content">
-      <h1 class="header__content-title">Remote Machine Learning Jobs</h1>
-      <p class="header__content-description">The number one place to find remote work in Machine Learning, Data Science, Deep Learning and Artificial Intelligence . Get new jobs to your inbox daily.</p>
+      <h1 class="header__content-title">KODLUYORUZ HACKATHON</h1>
+      <p class="header__content-description">
+        Kodluyoruzun düzenlediği etkinliklere ve daha fazlasına ulaşmak için bülteminize abone ol.
+      </p>
       <div class="header__content-submit-container">
-        <input type="text" placeholder="Enter your email">
-        <button>Notify me</button>
+        <input type="text" placeholder="Mail adresinizi giriniz.">
+        <button>Abone Ol!</button>
       </div>
     </div>
   </div>
