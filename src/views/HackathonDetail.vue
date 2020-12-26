@@ -48,7 +48,7 @@ export default {
       <template v-else>
         <div class="hackathon-detail__header">
           <img
-            src="https://kodilan.ams3.digitaloceanspaces.com/companies/superpeer.png"
+            src="../assets/Sponsors/kodluyoruz.png"
             class="hackathon-detail__header-logo"
           />
           <h1 class="hackathon-detail__header-title">
@@ -89,8 +89,7 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
 
     &__header {
       &-logo {
-        width: 120px;
-        height: 120px;
+        margin-top: 36px;
       }
 
       &-title {
