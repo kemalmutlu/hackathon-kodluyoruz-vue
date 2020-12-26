@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import HackathonList from "@/components/HackathonList";
 import Timer from "@/components/Timer";
 import FAQ from "@/components/FAQ";
+import GoTop from '@inotom/vue-go-top';
 
 export default {
   components: {
@@ -12,12 +13,14 @@ export default {
     HackathonList,
     Timer,
     FAQ,
+    GoTop,
   }
 };
 </script>
 
 <template>
   <div class="home">
+    <go-top :bottom="15"></go-top>
     <Navbar />
     <Header />
     <Timer />
