@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "moment": "^2.29.1",
     "vue": "^2.6.11",
+    "vue-accordion-menu": "^0.1.46",
     "vue-content-loader": "^0.2.3",
     "vue-router": "^3.2.0"
   },
