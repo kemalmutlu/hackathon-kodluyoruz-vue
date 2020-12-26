@@ -1,5 +1,7 @@
 # rake
 
+This is the website we made with Vue.js for the Kodluyoruz Hackathon. Live demo [Rake-Hackathon](https://rake-hackathon.netlify.app/)
+
 ## Project setup
 ```
 npm install
