@@ -28,7 +28,7 @@ export default {
 <template>
   <div class="hackathon-list-item" @click="redirectToDetailPage">
     <div class="hackathon-list-item__detail">
-      <img src="https://kodilan.ams3.digitaloceanspaces.com/companies/superpeer.png" class="hackathon-list-item__logo" />
+      <img src="../assets/kodluyoruz-logo.png" class="hackathon-list-item__logo" />
       <div class="hackathon-list-item__detail-content">
         <span class="hackathon-list-item__detail-content-title">
           {{ hackathon.title }}
@@ -61,6 +61,7 @@ $sub-text: rgb(107,114,128);
   &__logo {
     width: 80px;
     height: 80px;
+    object-fit: cover;
   }
 
   &__detail {

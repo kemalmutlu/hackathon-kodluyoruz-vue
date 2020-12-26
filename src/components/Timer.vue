@@ -2,7 +2,7 @@
   <div class="timer">
     <h1>Time left to the next Hackathon</h1>
     <h3>Machine Learning Hackathon</h3>
-    <flip-countdown deadline="2020-12-30 22:22:22"></flip-countdown>
+    <flip-countdown deadline="2021-01-02 10:00:00"></flip-countdown>
   </div>
 </template>
 

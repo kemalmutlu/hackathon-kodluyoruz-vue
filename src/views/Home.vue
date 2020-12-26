@@ -5,6 +5,7 @@ import HackathonList from "@/components/HackathonList";
 import Timer from "@/components/Timer";
 import FAQ from "@/components/FAQ";
 import GoTop from '@inotom/vue-go-top';
+import Sponsor from "@/components/Sponsor";
 
 export default {
   components: {
@@ -14,6 +15,7 @@ export default {
     Timer,
     FAQ,
     GoTop,
+    Sponsor,
   }
 };
 </script>
@@ -26,6 +28,7 @@ export default {
     <Timer />
     <Hackathon-List />
     <FAQ />
+    <Sponsor />
   </div>
 </template>
 

@@ -18,17 +18,14 @@ export default {
         />
       </router-link>
       <!-- <a href=""> -->
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Ana Sayfa</router-link>
       <!-- </a> -->
-      <a href="https://www.kodluyoruz.org/about">
-        About
+      <a href="https://www.kodluyoruz.org/about" target="_blank">
+        Hakkımızda
       </a>
       <!-- <a href=""> -->
-      <router-link to="/team">Team</router-link>
+      <router-link to="/team">Takım</router-link>
       <!-- </a> -->
-      <a href="">
-        Find a machine learning mentor
-      </a>
     </div>
     <div class="navbar__discord-link">
       <button @click="redirectToDiscord">
