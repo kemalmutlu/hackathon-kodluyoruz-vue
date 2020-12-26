@@ -1,16 +1,32 @@
 <script>
+import moment from 'moment';
+
 export default {
   props: {
     hackathon: {
       type: Object,
       required: true,
+    },
+    id: {
+      type: String,
+      required: true,
     }
   },
+  computed: {
+    dateTime() {
+      return moment.utc(this.hackathon.start_time).format('ll');
+    }
+  },
+  methods: {
+    redirectToDetailPage() {
+      this.$router.push(`hackathon/${this.id}`);
+    }
+  }
 }
 </script>
 
 <template>
-  <div class="hackathon-list-item">
+  <div class="hackathon-list-item" @click="redirectToDetailPage">
     <div class="hackathon-list-item__detail">
       <img src="https://kodilan.ams3.digitaloceanspaces.com/companies/superpeer.png" class="hackathon-list-item__logo" />
       <div class="hackathon-list-item__detail-content">
@@ -23,7 +39,7 @@ export default {
       </div>
     </div>
     <span class="hackathon-list-item__detail-date">
-      Nov. 27, 2020
+      {{ dateTime }}
     </span>
   </div>
 </template>

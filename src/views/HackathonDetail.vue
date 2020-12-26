@@ -1,28 +1,43 @@
 <script>
-import Navbar from "../components/Navbar";
-import ContentLoader from "../components/ContentLoader";
+import Navbar from '../components/Navbar';
+import ContentLoader from '../components/ContentLoader';
+import store from '../store';
+import moment from 'moment';
 
 export default {
   data() {
     return {
       isLoading: false,
-    };
+      hackathon: {},
+    }
   },
   components: {
     Navbar,
     ContentLoader,
+  },
+  computed: {
+    dateTime() {
+      return moment.utc(this.hackathon.start_time).format('LL');
+    }
   },
   activated() {
     this.isLoading = true;
   },
   created() {
     this.isLoading = true;
+    const { id } = this.$route.params;
 
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000);
-  },
-};
+    store.fetchHackathonById(id)
+      .then(({ data }) => {
+        this.hackathon = data.data.attributes;
+      })
+      .finally(() => {
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 1000)
+      })
+  }
+}
 </script>
 
 <template>
@@ -37,25 +52,15 @@ export default {
             class="hackathon-detail__header-logo"
           />
           <h1 class="hackathon-detail__header-title">
-            Software Engineer
+            {{ hackathon.title }}
           </h1>
           <p class="hackathon-detail__header-date">
-            Nov. 27, 2020
+            {{ dateTime }}
           </p>
         </div>
         <div class="hackathon-detail__content">
           <p>
-            Farm Vision Technologies is an early-stage startup company focused
-            on leveraging computer vision technology to provide growers of
-            specialty crops with reliable, accurate, actionable information
-            about their groves and orchards. We are a small team, tightly
-            focused on developing a proof-of-concept product that excites our
-            customers. We are seeking a Senior Data Scientist to take the lead
-            in converting the visual metrics we can measure into actionable
-            insights for our customers. You will help fruit growers solve
-            important problems in their orchards! This is a multidisciplinary
-            role containing elements of statistical analysis, agronomy, and
-            machine learning.
+            {{ hackathon.description }}
           </p>
         </div>
       </template>

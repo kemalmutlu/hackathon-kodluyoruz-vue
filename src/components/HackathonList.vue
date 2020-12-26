@@ -1,5 +1,6 @@
 <script>
 import HackathonListItem from './HackathonListItem';
+import store from '../store';
 
 export default {
   components: {
@@ -7,29 +8,14 @@ export default {
   },
   data() {
     return {
-      hackathons: [
-        {
-        title: 'Senior Data Scientist',
-        description: 'Lorem ipsum dolor sit.',
-        id: Math.random() * 7,
-        },
-        {
-        title: 'Software Engineer',
-        description: 'Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit',
-        id: Math.random() * 7,
-        },
-        {
-        title: 'Machine Learning Engineer',
-        description: 'Lorem ipsum dolor sit.',
-        id: Math.random() * 7,
-        }
-      ]
+      hackathons: [],
     };
   },
-  methods: {
-    redirectToDetailPage() {
-      this.$router.push({ name: 'HackathonDetail' });
-    }
+  mounted() {
+    store.fetchHackathons()
+      .then(({ data }) => {
+        this.hackathons = data.data;
+      });
   },
 }
 </script>
@@ -40,8 +26,8 @@ export default {
     <hackathon-list-item
           v-for="hackathon in hackathons"
           :key="hackathon.id"
-          :hackathon="hackathon"
-          @click.native="redirectToDetailPage"
+          :id="hackathon.id"
+          :hackathon="hackathon.attributes"
     />
   </div>
 </template>
