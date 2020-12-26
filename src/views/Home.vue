@@ -1,17 +1,30 @@
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
+import HackathonList from "@/components/HackathonList";
 
 export default {
-  name: "Home",
   components: {
-    HelloWorld
+    Navbar,
+    Header,
+    HackathonList,
   }
 };
 </script>
 
 <template>
   <div class="home">
-    <hello-world />
+    <Navbar />
+    <Header />
+    <Hackathon-List />
   </div>
 </template>
+
+<style lang="scss">
+.home {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+</style>
