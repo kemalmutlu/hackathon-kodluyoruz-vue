@@ -21,25 +21,25 @@ export default {
           name: "Kemal Mutlu",
           title: "Back-End Developer",
           img: Kemal,
-          desc: `www.linkedin.com/in/kemalmutlu`,
+          desc: `https://www.linkedin.com/in/kemalmutlu`,
         },
         {
           name: "Sezer İstif",
           title: "Software Engineer",
           img: Sezer,
-          desc: `www.linkedin.com/in/sezer-istif`,
+          desc: `https://www.linkedin.com/in/sezer-istif`,
         },
         {
           name: "Cengiz C. Mataracı",
           title: "Full Stack Developer",
           img: Cengiz,
-          desc: `www.linkedin.com/in/cengizcmataraci`,
+          desc: `https://www.linkedin.com/in/cengizcmataraci`,
         },
         {
           name: "Ferhat Demir",
           title: "Front-End Developer",
           img: Ferhat,
-          desc: `www.linkedin.com/in/demirferhat`,
+          desc: `https://www.linkedin.com/in/demirferhat`,
         },
       ],
     };
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <template>
-  <div class="hackathon-detail-wrapper">
+  <div class="hackathon-team-wrapper">
     <Navbar />
     <div class="hackathon-detail">
       <content-loader v-if="isLoading" />
@@ -78,7 +78,7 @@ export default {
                         />
                         <h3 style="margin-top: 10px;">{{ member.name }}</h3>
                         <h6>{{ member.title }}</h6>
-                        <h6>{{ member.desc }}</h6>
+                        <h6><a :href="member.desc" target="_blank">{{ member.desc }}</a></h6>
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ $content-color: rgb(75, 85, 99);
 $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
   0 0 0 1px rgba(10, 10, 10, 0.02);
 
-.hackathon-detail-wrapper {
+.hackathon-team-wrapper {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
@@ -109,30 +109,9 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
     text-align: center;
     padding: 1rem 4rem;
     box-shadow: $box-shadow;
-
-    &__header {
-      &-logo {
-        width: 120px;
-        height: 120px;
-      }
-
-      &-title {
-        margin: 0;
-      }
-
-      &-date {
-        margin: 1rem 2rem 0 0;
-      }
-    }
-
-    &__content {
-      white-space: pre-line;
-      color: $content-color;
-      line-height: 1.75rem;
-      padding-bottom: 2rem;
-    }
   }
 }
+
 .location-contain {
   display: flex;
   justify-content: center;
@@ -148,6 +127,7 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
   border: 1px solid #ddd;
   padding: 20px 20px;
   margin: 10px;
+
   h2 {
     margin: 0;
     text-align: center;
