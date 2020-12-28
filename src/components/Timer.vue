@@ -1,15 +1,17 @@
 <template>
-  <div class="timer">
-    <h1>Sıradaki Hackathon'a kalan süre</h1>
-    <flip-countdown deadline="2021-01-02 10:00:00"></flip-countdown>
+  <div id="hackathon">
+    <div class="timer">
+      <h1>Sıradaki Hackathon'a kalan süre</h1>
+      <flip-countdown deadline="2021-01-02 10:00:00"></flip-countdown>
+    </div>
   </div>
 </template>
 
 <script>
-import FlipCountdown from 'vue2-flip-countdown'
+import FlipCountdown from "vue2-flip-countdown";
 export default {
-    components: { FlipCountdown }
-}
+  components: { FlipCountdown },
+};
 </script>
 
 <style scoped>

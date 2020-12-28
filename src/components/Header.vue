@@ -71,6 +71,10 @@ $main-color: rgb(255,138,76);
         color: $main-color;
         cursor: pointer;
       }
+
+      button:hover {
+        font-weight:bold;
+      }
     }
   }
 }

@@ -16,7 +16,8 @@
     "vue-accordion-menu": "^0.1.46",
     "vue-content-loader": "^0.2.3",
     "vue-router": "^3.2.0",
-    "vue2-flip-countdown": "^0.11.1"
+    "vue2-flip-countdown": "^0.11.1",
+    "vue2-smooth-scroll": "^1.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

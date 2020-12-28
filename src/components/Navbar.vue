@@ -17,15 +17,14 @@ export default {
           alt="Kodluyoruz logo"
         />
       </router-link>
-      <!-- <a href=""> -->
       <router-link to="/">Ana Sayfa</router-link>
-      <!-- </a> -->
       <a href="https://www.kodluyoruz.org/about" target="_blank">
         Hakkımızda
       </a>
-      <!-- <a href=""> -->
       <router-link to="/team">Takım</router-link>
-      <!-- </a> -->
+      <a href="#hackathon">
+        Hackathon
+      </a>
     </div>
     <div class="navbar__discord-link">
       <button @click="redirectToDiscord">
@@ -38,6 +37,10 @@ export default {
 <style lang="scss">
 $link-color: rgb(107, 114, 128);
 $link-hover-color: rgb(22, 30, 46);
+
+// html {
+//   scroll-behavior: smooth; //smoot olunca vue-go-top yavaşlıyor.
+// }
 
 .navbar {
   display: flex;
@@ -78,6 +81,11 @@ $link-hover-color: rgb(22, 30, 46);
 
       &:focus {
         outline: none;
+      }
+
+      &:hover {
+        box-shadow: 1px 1px rgb(68, 70, 75);
+        border-radius: 6px;
       }
     }
   }

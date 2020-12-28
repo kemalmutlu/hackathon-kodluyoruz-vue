@@ -21,25 +21,25 @@ export default {
           name: "Kemal Mutlu",
           title: "Back-End Developer",
           img: Kemal,
-          desc: `https://www.linkedin.com/in/kemalmutlu`,
+          link: `https://www.linkedin.com/in/kemalmutlu`,
         },
         {
           name: "Sezer İstif",
           title: "Software Engineer",
           img: Sezer,
-          desc: `https://www.linkedin.com/in/sezer-istif`,
+          link: `https://www.linkedin.com/in/sezer-istif`,
         },
         {
           name: "Cengiz C. Mataracı",
           title: "Full Stack Developer",
           img: Cengiz,
-          desc: `https://www.linkedin.com/in/cengizcmataraci`,
+          link: `https://www.linkedin.com/in/cengizcmataraci`,
         },
         {
           name: "Ferhat Demir",
           title: "Front-End Developer",
           img: Ferhat,
-          desc: `https://www.linkedin.com/in/demirferhat`,
+          link: `https://www.linkedin.com/in/demirferhat`,
         },
       ],
     };
@@ -61,24 +61,24 @@ export default {
           <div class="location-contain">
             <div class="container">
               <div class="row">
-            <div class="locations col-3" v-for="member in members" :key="member.name">
+                <div
+                  class="locations col-3"
+                  v-for="member in members"
+                  :key="member.name"
+                >
+                  <div :member="member" class="card border-0 member">
                     <div
-                      :member="member"
-                      class="card border-0"
-                      style="width: 100%; height: 100%; margin-right: 15px;"
+                      class="card body border-0 text-center"
+                      style="height: 100%;"
                     >
-                      <div
-                        class="card body border-0 text-center"
-                        style="height: 100%;"
-                      >
-                        <img
-                          :src="member.img"
-                          class="card-img-top"
-                          style="width: 220px; height: 280px; border-radius: 50px;    "
-                        />
-                        <h3 style="margin-top: 10px;">{{ member.name }}</h3>
-                        <h6>{{ member.title }}</h6>
-                        <h6><a :href="member.desc" target="_blank">{{ member.desc }}</a></h6>
+                      <img :src="member.img" class="card-img-top member" />
+                      <h3 style="margin-top: 10px;">{{ member.name }}</h3>
+                      <h6>{{ member.title }}</h6>
+                      <h6>
+                        <a :href="member.link" target="_blank">{{
+                          member.link
+                        }}</a>
+                      </h6>
                     </div>
                   </div>
                 </div>
@@ -136,5 +136,15 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
     margin: 10px;
     align-self: center;
   }
+}
+.member {
+  width: 100%;
+  height: 100%;
+  margin-right: 15px;
+}
+.member img {
+  width: 220px;
+  height: 280px;
+  border-radius: 50px;
 }
 </style>
