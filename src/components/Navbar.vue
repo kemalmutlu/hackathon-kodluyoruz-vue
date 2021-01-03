@@ -84,7 +84,7 @@ $link-hover-color: rgb(22, 30, 46);
       }
 
       &:hover {
-        box-shadow: 1px 1px rgb(68, 70, 75);
+        box-shadow: 1px 1px 2px rgb(68, 70, 75);
         border-radius: 6px;
       }
     }
